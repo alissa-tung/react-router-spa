@@ -1,5 +1,5 @@
 {pkgs}: let
-  gnumake = pkgs.writeShellScriptBin "make" ''exec ${pkgs.gnumake}/bin/make -C $(${pkgs.git}/bin/git rev-parse --show-toplevel) "$@"'';
+  gnumake = pkgs.writeShellScriptBin "make" ''exec nix develop --command ${pkgs.gnumake}/bin/make -C $(${pkgs.git}/bin/git rev-parse --show-toplevel) "$@"'';
 in
   pkgs.mkShell {
     packages =
