@@ -1,5 +1,6 @@
-.react-router
-node_modules
-pnpm-lock.yaml
 /result
-web-app/build
+node_modules
+dist
+pnpm-lock.yaml
+.react-router
+src/web-app/build

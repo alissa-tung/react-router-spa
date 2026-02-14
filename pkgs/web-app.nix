@@ -25,7 +25,7 @@ in
         pnpmWorkspaces
         ;
       fetcherVersion = 3;
-      hash = "sha256-Q1mc8UjKRFthEd/+WoYRRe2psl/Q/aIP+cCqk7s/LQY=";
+      hash = "sha256-BRcMmvVYILOs59O86nnfWqtQHHHFSVVL7jGQ20+WTkk=";
     };
 
     nativeBuildInputs = [
@@ -39,6 +39,6 @@ in
     '';
 
     installPhase = ''
-      cp -r ${pname}/build/client $out
+      cp -r ./src/${pname}/build/client $out
     '';
   })
