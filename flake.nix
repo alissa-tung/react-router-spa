@@ -14,6 +14,12 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in {
         devShells.default = import ./pkgs/shell.nix {inherit pkgs;};
+        packages = {
+          web-app = pkgs.callPackage ./pkgs/web-app.nix {};
+          web-app-image = pkgs.callPackage ./pkgs/web-app-image.nix {
+            web-app = self.packages.${system}.web-app;
+          };
+        };
       }
     );
 }

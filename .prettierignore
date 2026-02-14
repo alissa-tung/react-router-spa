@@ -1,3 +1,5 @@
 .react-router
 node_modules
 pnpm-lock.yaml
+/result
+web-app/build
