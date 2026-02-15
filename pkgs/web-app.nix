@@ -7,6 +7,7 @@
   pnpmConfigHook,
 }: let
   pname = "web-app";
+  pnpmWorkspacePrefix = "@monorepo";
 in
   stdenv.mkDerivation (finalAttrs: {
     inherit pname;
@@ -14,7 +15,7 @@ in
 
     src = lib.cleanSource ./..;
 
-    pnpmWorkspaces = [pname];
+    pnpmWorkspaces = ["${pnpmWorkspacePrefix}/${pname}"];
 
     pnpmDeps = fetchPnpmDeps {
       inherit
@@ -25,7 +26,7 @@ in
         pnpmWorkspaces
         ;
       fetcherVersion = 3;
-      hash = "sha256-BRcMmvVYILOs59O86nnfWqtQHHHFSVVL7jGQ20+WTkk=";
+      hash = "sha256-35bLFFKuNcFWsgSGBqe9v2ZEsXHgqk19TnI0j477DIE=";
     };
 
     nativeBuildInputs = [
@@ -35,7 +36,7 @@ in
     ];
 
     buildPhase = ''
-      pnpm --filter=${pname} run build
+      pnpm --filter=${pnpmWorkspacePrefix}/${pname} run build
     '';
 
     installPhase = ''

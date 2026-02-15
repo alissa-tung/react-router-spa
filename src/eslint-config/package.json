@@ -1,12 +1,17 @@
 {
-  "name": "eslint-config",
+  "name": "@monorepo/eslint-config",
   "private": true,
   "type": "module",
+  "exports": {
+    "./*": "./*.ts"
+  },
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "tsc --noEmit && eslint --fix --max-warnings=0"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "^2.12.4",
+    "@monorepo/tsconfig": "workspace:*",
+    "@eslint-react/eslint-plugin": "^2.13.0",
     "@eslint/js": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^8.55.0",
     "@typescript-eslint/parser": "^8.55.0",

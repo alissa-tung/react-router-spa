@@ -1,11 +1,12 @@
 {
-  "name": "web-app",
+  "name": "@monorepo/web-app",
   "private": true,
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "react-router build",
     "dev": "react-router dev",
+    "lint": "tsc --noEmit && eslint --fix --max-warnings=0",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
@@ -17,13 +18,14 @@
     "react-router": "^7.13.0"
   },
   "devDependencies": {
+    "@monorepo/eslint-config": "workspace:*",
+    "@monorepo/tsconfig": "workspace:*",
     "@react-router/dev": "^7.13.0",
     "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^25.2.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
-    "eslint-config": "workspace:*",
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.1",
     "vite-plugin-babel": "^1.5.1",

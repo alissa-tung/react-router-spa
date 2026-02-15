@@ -1,17 +1,11 @@
 {
-  "extends": "../tsconfig.base.json",
-  "include": [
-    "**/*",
-    "**/.server/**/*",
-    "**/.client/**/*",
-    ".react-router/types/**/*"
-  ],
+  "extends": "@monorepo/tsconfig/tsconfig.base.json",
+  "include": ["**/*", ".react-router/types/**/*"],
   "compilerOptions": {
-    "types": ["node", "vite/client"],
+    "types": ["vite/client"],
     "rootDirs": [".", "./.react-router/types"],
     "paths": {
       "@/*": ["./app/*"]
-    },
-    "noEmit": true
+    }
   }
 }

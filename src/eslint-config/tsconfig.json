@@ -1,11 +1,4 @@
 {
-  "extends": "../tsconfig.base.json",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist"],
-  "compilerOptions": {
-    "outDir": "dist",
-    "paths": {
-      "eslint-config/*": ["./*"]
-    }
-  }
+  "extends": "@monorepo/tsconfig/tsconfig.base.json",
+  "include": ["**/*.ts"]
 }

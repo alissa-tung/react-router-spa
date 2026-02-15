@@ -19,5 +19,4 @@ fmt:
 lint:
 	(fd -e sh -x shellcheck --external-sources)
 	(caddy validate)
-	(cd src && fd package.json -x sh -c 'cd {//} && pnpm exec tsc --noEmit')
-	(cd src && fd package.json -x sh -c 'cd {//} && pnpm exec eslint --fix --max-warnings=0')
+	(pnpm -r run lint)
