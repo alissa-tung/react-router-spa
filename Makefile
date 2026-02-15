@@ -19,4 +19,5 @@ fmt:
 lint:
 	(fd -e sh -x shellcheck --external-sources)
 	(caddy validate)
+	(pnpm -r run typecheck)
 	(pnpm -r run lint)

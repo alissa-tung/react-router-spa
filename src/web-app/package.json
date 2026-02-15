@@ -6,8 +6,8 @@
     "preinstall": "npx only-allow pnpm",
     "build": "react-router build",
     "dev": "react-router dev",
-    "lint": "tsc --noEmit && eslint --fix --max-warnings=0",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "lint": "eslint --fix --max-warnings=0"
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.13.0",

@@ -7,7 +7,8 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "lint": "tsc --noEmit && eslint --fix --max-warnings=0"
+    "typecheck": "tsc",
+    "lint": "eslint --fix --max-warnings=0"
   },
   "devDependencies": {
     "@monorepo/tsconfig": "workspace:*",

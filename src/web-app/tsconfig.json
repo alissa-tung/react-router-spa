@@ -1,6 +1,5 @@
 {
   "extends": "@monorepo/tsconfig/tsconfig.base.json",
-  "include": ["**/*", ".react-router/types/**/*"],
   "compilerOptions": {
     "types": ["vite/client"],
     "rootDirs": [".", "./.react-router/types"],
