@@ -26,7 +26,7 @@ in
         pnpmWorkspaces
         ;
       fetcherVersion = 3;
-      hash = "sha256-35bLFFKuNcFWsgSGBqe9v2ZEsXHgqk19TnI0j477DIE=";
+      hash = "sha256-QqLcDIzojSJUgTFJ+1EUoPUcCPfrnLWQNKvt5Xt5iw4=";
     };
 
     nativeBuildInputs = [

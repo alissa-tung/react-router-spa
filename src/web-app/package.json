@@ -7,7 +7,7 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "typecheck": "react-router typegen && tsc",
-    "lint": "eslint --fix --max-warnings=0"
+    "lint": "oxlint --fix-dangerously --type-check --type-aware && eslint --fix --max-warnings=0"
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.13.0",
