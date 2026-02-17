@@ -19,7 +19,7 @@ dockerTools.buildLayeredImage {
       "--adapter"
       "caddyfile"
       "--config"
-      "${../Caddyfile}"
+      "${../src/web-app/Caddyfile}"
     ];
   };
 

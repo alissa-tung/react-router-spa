@@ -14,10 +14,10 @@ fmt:
 	(fd -e nix -X nixfmt {} \; -X alejandra -q {})
 	(pnpm exec oxfmt)
 	(fd -e sh -X shfmt -l -w --simplify --indent 2 --case-indent --space-redirects)
-	(caddy fmt --overwrite)
+	(fd Caddyfile -X caddy fmt --overwrite --config)
 
 lint:
-	(fd -e sh -x shellcheck --external-sources)
-	(caddy validate)
+	(fd -e sh -X shellcheck --external-sources)
+	(fd Caddyfile -X caddy validate --config)
 	(pnpm -r run typecheck)
 	(pnpm -r run lint)
